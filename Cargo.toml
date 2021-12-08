@@ -7,9 +7,9 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-fo_map_format = { path = "../../crates/fo_map_format" }
-fo_proto_format = { git = "https://github.com/fonline-roleplay/fo_proto_format.git" }
-nom_prelude = { path = "../../crates/nom_prelude" }
+fo_map_format = { git = "https://github.com/fonline-rust/fo_map_format.git" }
+fo_proto_format = { git = "https://github.com/fonline-rust/fo_proto_format.git" }
+nom_prelude = { git = "https://github.com/fonline-rust/format_extras.git" }
 csv = "1.1"
 serde = { version = "1.0", features = ["derive"] }
 
