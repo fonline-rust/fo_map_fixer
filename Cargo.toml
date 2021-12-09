@@ -1,6 +1,6 @@
 [package]
-name = "map_fix_protos"
-version = "0.1.0"
+name = "fo_map_fixer"
+version = "0.2.0"
 authors = ["qthree <qthree3@gmail.com>"]
 edition = "2018"
 
