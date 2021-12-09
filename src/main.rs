@@ -117,7 +117,7 @@ fn dir<P1: AsRef<OsStr>, P2: AsRef<Path>>(env: P1, file: P2) -> Option<PathBuf> 
     if let Some(path) = env.and_then(|env| Path::new(&env).canonicalize().ok()) {
         Some(path)
     } else if let Ok(path) =
-        std::fs::read_to_string(file).and_then(|env| Path::new(&env).canonicalize())
+        std::fs::read_to_string(file).and_then(|env| Path::new(env.trim()).canonicalize())
     {
         Some(path)
     } else {
