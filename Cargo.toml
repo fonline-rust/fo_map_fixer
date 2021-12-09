@@ -1,17 +1,19 @@
 [package]
 name = "fo_map_fixer"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["qthree <qthree3@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-fo_map_format = { git = "https://github.com/fonline-rust/fo_map_format.git" }
+fo_map_format = { git = "https://github.com/fonline-rust/fo_map_format.git", features = ["serde1"] }
 fo_proto_format = { git = "https://github.com/fonline-rust/fo_proto_format.git" }
 nom_prelude = { git = "https://github.com/fonline-rust/format_extras.git" }
-csv = "1.1"
-serde = { version = "1.0", features = ["derive"] }
+csv = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rayon = "1"
 
 [profile.release]
 lto = "fat"
